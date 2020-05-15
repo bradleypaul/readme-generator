@@ -1,2 +1,3 @@
-# readme-generator
-Generator for GitHub README.md files
+# Professional README Generator Starter Code
+
+[How to create a Professional README](./readme-guide.md)
