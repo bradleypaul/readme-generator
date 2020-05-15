@@ -13,27 +13,45 @@ const questions =  [
     }, {
         type: "input",
         name: "Description",
-        message: "What is your name?"
-    }, {
-        type: "input",
-        name: "Table Of Contents",
-        message: "What is your name?"
+        message: "Describe your project."
     }, {
         type: "input",
         name: "Installation",
-        message: "What is your name?"
+        message: "What steps must a user take to install your project?"
     }, {
         type: "input",
         name: "Usage",
         message: "What is your products usage?",
     }, {
-        type: "input",
-        name: "Credits",
-        message: "Who wrote this project?"
+        type: "list",
+        name: "License",
+        message: "Which license would you like to use?",
+        choices: [
+            "Apache 2.0",
+            "MIT",
+            "GPL3",
+            "BSD 3 Clause"
+        ]
     }, {
         type: "input",
-        name: "License",
-        message: "Which license would you like to use?"
+        name: "Contributing",
+        message: "Who all worked on this project?"
+    },{
+        type: "input",
+        name: "Tests",
+        message: "How should tests be run for this project?",
+    }, {
+        type: "input",
+        name: "Github",
+        message: "Please input your Github username."
+    },{
+        type: "input",
+        name: "Email",
+        message: "Please input your contact email."
+    },{
+        type: "input",
+        name: "Contact",
+        message: "Please input instructions on how to contact you."
     }
 ];
 
@@ -46,6 +64,7 @@ async function writeToFile(fileName, data) {
 // async because it's 2020 and we should be using it now
 async function init() {
     const answers = await inquirer.prompt(questions);
+    console.log(answers);
     const generatedMarkdown = generateMarkdown(answers);
     await writeToFile("README.md", generatedMarkdown);
 }
