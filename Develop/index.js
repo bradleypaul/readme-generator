@@ -9,22 +9,22 @@ const questions =  [
     {
         type: "input",
         name: "title",
-        message: `What is the name of your project?`
+        message: 'What is the name of your project?'
     }, {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "Describe your project."
     }, {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "What steps must a user take to install your project?"
     }, {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "What is your products usage?",
     }, {
         type: "list",
-        name: "License",
+        name: "license",
         message: "Which license would you like to use?",
         choices: [
             "Apache 2.0",
@@ -34,23 +34,23 @@ const questions =  [
         ]
     }, {
         type: "input",
-        name: "Contributing",
-        message: "Who all worked on this project?"
+        name: "contributing",
+        message: "Please describe how others can contribute to this project."
     },{
         type: "input",
-        name: "Tests",
-        message: "How should tests be run for this project?",
+        name: "tests",
+        message: "How are tests run for this project?",
     }, {
         type: "input",
-        name: "Github",
+        name: "gitHub",
         message: "Please input your Github username."
     },{
         type: "input",
-        name: "Email",
+        name: "email",
         message: "Please input your contact email."
     },{
         type: "input",
-        name: "Contact",
+        name: "contact",
         message: "Please input instructions on how to contact you."
     }
 ];
@@ -64,7 +64,6 @@ async function writeToFile(fileName, data) {
 // async because it's 2020 and we should be using it now
 async function init() {
     const answers = await inquirer.prompt(questions);
-    console.log(answers);
     const generatedMarkdown = generateMarkdown(answers);
     await writeToFile("README.md", generatedMarkdown);
 }
