@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   ## Installation
   \`\`\`bash
   git clone https://github.com/${data.gitHub}/${data.title}.git
-  ${data.installation}
+  ${data.installation.replace(' | ', '\n')}
   \`\`\`
   
   ## Usage
