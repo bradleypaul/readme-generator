@@ -8,13 +8,13 @@ A project for streamlining the building of READMEs for new projects. Instead of 
 
 ## Table of Contents
 
-* [Description](#description})
-* [Installation](#installation})
-* [Usage](#usage})
-* [License](#license})
-* [Contributing](#contributing})
-* [Tests](#tests})
-* [Contact](#contact})
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Contact](#contact)
 
 ## Installation
 
