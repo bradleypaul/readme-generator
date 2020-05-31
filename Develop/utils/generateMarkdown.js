@@ -33,6 +33,7 @@ function generateMarkdown(data) {
   * [Contact](#contact)
   
   ## Installation
+
   \`\`\`bash
   git clone https://github.com/${data.gitHub}/${data.title}.git
   ${data.installation.replace(' | ', '\n')}
@@ -57,7 +58,9 @@ function generateMarkdown(data) {
   ## Contact
 
   GitHub profile: [${data.gitHub}](https://github.com/${data.gitHub})
+
   My email is: [${data.email}](mailto:${data.email})
+  
   ${data.contact}
    `;
 }
